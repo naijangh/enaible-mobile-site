@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENAiBLE - Onboarding</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans min-h-screen">
+  <!-- Top Nav Bar -->
+  <nav class="w-full py-4 bg-white shadow-sm flex justify-center items-center">
+    <span class="text-2xl font-bold tracking-wide">ENAiBLE</span>
+  </nav>
+
+  <!-- Onboarding Section -->
+  <section class="px-4 pt-8">
+    <div class="max-w-md mx-auto">
+      <h2 class="text-2xl font-bold text-center mb-6">Get your perfect fit</h2>
+      <form id="onboardingForm" class="space-y-6">
+        <!-- Measurements -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold">Your Measurements</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="height" class="block text-sm font-medium text-gray-700">Height (inches)</label>
+              <input type="number" id="height" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div>
+              <label for="weight" class="block text-sm font-medium text-gray-700">Weight (lbs)</label>
+              <input type="number" id="weight" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div>
+              <label for="chest" class="block text-sm font-medium text-gray-700">Chest (inches)</label>
+              <input type="number" id="chest" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div>
+              <label for="waist" class="block text-sm font-medium text-gray-700">Waist (inches)</label>
+              <input type="number" id="waist" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <div class="col-span-2">
+              <label for="inseam" class="block text-sm font-medium text-gray-700">Inseam (inches)</label>
+              <input type="number" id="inseam" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+          </div>
+        </div>
+        <!-- Clothing Sizes -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold">Your Usual Sizes</h3>
+          <div class="space-y-3">
+            <div>
+              <label for="nikeSize" class="block text-sm font-medium text-gray-700">Nike Size</label>
+              <select id="nikeSize" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">Select size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+            </div>
+            <div>
+              <label for="adidasSize" class="block text-sm font-medium text-gray-700">Adidas Size</label>
+              <select id="adidasSize" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">Select size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+            </div>
+            <div>
+              <label for="levisSize" class="block text-sm font-medium text-gray-700">Levi's Size</label>
+              <select id="levisSize" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">Select size</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+                <option value="34">34</option>
+                <option value="36">36</option>
+                <option value="38">38</option>
+                <option value="40">40</option>
+              </select>
+            </div>
+            <div>
+              <label for="hmSize" class="block text-sm font-medium text-gray-700">H&amp;M Size</label>
+              <select id="hmSize" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">Select size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+            </div>
+            <div>
+              <label for="zaraSize" class="block text-sm font-medium text-gray-700">Zara Size</label>
+              <select id="zaraSize" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">Select size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- Fit Preference -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold">Fit Preference</h3>
+          <div>
+            <label for="fitPreference" class="block text-sm font-medium text-gray-700">Preferred Fit</label>
+            <select id="fitPreference" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">Select fit</option>
+              <option value="slim">Slim</option>
+              <option value="relaxed">Relaxed</option>
+              <option value="tailored">Tailored</option>
+              <option value="loose">Loose</option>
+            </select>
+          </div>
+        </div>
+        <!-- Continue Button -->
+        <a 
+          href="filters.html"
+          class="block w-full py-3 rounded-lg bg-blue-600 text-white font-semibold text-lg shadow-md hover:bg-blue-700 transition-colors text-center"
+        >
+          Continue
+        </a>
+      </form>
+    </div>
+  </section>
+</body>
+</html> 

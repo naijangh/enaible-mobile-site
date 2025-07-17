@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENAiBLE - Filters</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans min-h-screen">
+  <!-- Top Nav Bar -->
+  <nav class="w-full py-4 bg-white shadow-sm flex justify-center items-center">
+    <span class="text-2xl font-bold tracking-wide">ENAiBLE</span>
+  </nav>
+
+  <!-- Filters Section -->
+  <section class="px-4 pt-8">
+    <div class="max-w-md mx-auto">
+      <h2 class="text-2xl font-bold text-center mb-6">Refine Your Search</h2>
+      <form id="filtersForm" class="space-y-6">
+        <!-- Weather Dropdown -->
+        <div>
+          <label for="weather" class="block text-sm font-medium text-gray-700">Weather</label>
+          <select id="weather" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Any weather</option>
+            <option value="hot">Hot</option>
+            <option value="cold">Cold</option>
+            <option value="rainy">Rainy</option>
+            <option value="mild">Mild</option>
+          </select>
+        </div>
+        <!-- Occasion Dropdown -->
+        <div>
+          <label for="occasion" class="block text-sm font-medium text-gray-700">Occasion</label>
+          <select id="occasion" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Any occasion</option>
+            <option value="casual">Casual</option>
+            <option value="formal">Formal</option>
+            <option value="work">Work</option>
+            <option value="sport">Sport</option>
+            <option value="party">Party</option>
+          </select>
+        </div>
+        <!-- Location Dropdown -->
+        <div>
+          <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
+          <select id="location" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Any location</option>
+            <option value="indoor">Indoor</option>
+            <option value="outdoor">Outdoor</option>
+            <option value="beach">Beach</option>
+            <option value="mountain">Mountain</option>
+            <option value="city">City</option>
+          </select>
+        </div>
+        <!-- Continue Button -->
+        <a 
+          href="search.html"
+          class="block w-full py-3 rounded-lg bg-blue-600 text-white font-semibold text-lg shadow-md hover:bg-blue-700 transition-colors text-center"
+        >
+          Continue to Search
+        </a>
+      </form>
+    </div>
+  </section>
+</body>
+</html> 

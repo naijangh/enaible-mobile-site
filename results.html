@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENAiBLE - Results</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans min-h-screen">
+  <!-- Top Nav Bar -->
+  <nav class="w-full py-4 bg-white shadow-sm flex justify-center items-center">
+    <span class="text-2xl font-bold tracking-wide">ENAiBLE</span>
+  </nav>
+
+  <!-- Results Section -->
+  <section class="px-4 pt-8 pb-8">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl font-bold text-center mb-6">Your Perfect Matches</h2>
+      <div id="results" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Product cards will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Example product data - this would typically come from your backend
+    const products = [
+      {
+        id: 1,
+        name: "Nike Air Max 270",
+        price: "$129.99",
+        image: "https://placehold.co/300x300?text=Nike+Air+Max",
+        pickupAvailable: true,
+        pickupLocation: "Nike Store - Downtown"
+      },
+      {
+        id: 2,
+        name: "Adidas Ultraboost 21",
+        price: "$179.99",
+        image: "https://placehold.co/300x300?text=Adidas+Ultraboost",
+        pickupAvailable: true,
+        pickupLocation: "Adidas Store - Mall"
+      },
+      {
+        id: 3,
+        name: "Levi's 501 Original Jeans",
+        price: "$89.99",
+        image: "https://placehold.co/300x300?text=Levi's+501",
+        pickupAvailable: false,
+        pickupLocation: null
+      },
+      {
+        id: 4,
+        name: "H&M Cotton T-Shirt",
+        price: "$19.99",
+        image: "https://placehold.co/300x300?text=H&M+T-Shirt",
+        pickupAvailable: true,
+        pickupLocation: "H&M - Shopping Center"
+      },
+      {
+        id: 5,
+        name: "Zara Blazer Jacket",
+        price: "$149.99",
+        image: "https://placehold.co/300x300?text=Zara+Blazer",
+        pickupAvailable: true,
+        pickupLocation: "Zara - Fashion District"
+      },
+      {
+        id: 6,
+        name: "Uniqlo Slim Fit Shirt",
+        price: "$39.99",
+        image: "https://placehold.co/300x300?text=Uniqlo+Shirt",
+        pickupAvailable: false,
+        pickupLocation: null
+      }
+    ];
+
+    // Function to create product cards
+    function createProductCard(product) {
+      return `
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="relative">
+            <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover" />
+            ${product.pickupAvailable ? 
+              '<span class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">Pickup Available</span>' : 
+              '<span class="absolute top-2 right-2 bg-gray-500 text-white text-xs px-2 py-1 rounded-full">Online Only</span>'
+            }
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2">${product.name}</h3>
+            <p class="text-2xl font-bold text-blue-600 mb-3">${product.price}</p>
+            ${product.pickupAvailable ? 
+              `<p class="text-sm text-gray-600 mb-3">📍 ${product.pickupLocation}</p>` : 
+              '<p class="text-sm text-gray-500 mb-3">Shipping only</p>'
+            }
+            <button class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+              ${product.pickupAvailable ? 'Reserve for Pickup' : 'Add to Cart'}
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // Populate results container
+    document.addEventListener('DOMContentLoaded', function() {
+      const resultsContainer = document.getElementById('results');
+      products.forEach(product => {
+        resultsContainer.innerHTML += createProductCard(product);
+      });
+    });
+  </script>
+</body>
+</html> 

@@ -1,0 +1,65 @@
+/* Font overrides for better typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced button hover and active effects */
+#searchButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+#searchButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.10);
+}
+
+/* Scrollable product grid styling */
+#results {
+  max-height: 70vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f7fafc;
+}
+#results::-webkit-scrollbar {
+  width: 6px;
+}
+#results::-webkit-scrollbar-track {
+  background: #f7fafc;
+  border-radius: 3px;
+}
+#results::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+#results::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Smooth transitions for product cards */
+#results > div {
+  transition: all 0.2s ease-in-out;
+}
+#results > div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* Input focus enhancement */
+#searchInput:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Loading state for search button */
+#searchButton.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  #results {
+    max-height: 60vh;
+  }
+} 
